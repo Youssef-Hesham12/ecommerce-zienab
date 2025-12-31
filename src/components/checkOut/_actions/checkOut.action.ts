@@ -7,6 +7,8 @@ export async function checkOutAction(cartId: string, details:string,city:string,
             city,
             phone,
         }
+        // kkkk
+        
         const response = await fetch(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cartId}?url=${process.env.NEXT_URL}, {
             method: "POST",
             body: JSON.stringify({ shippingAddress }),
@@ -18,3 +20,7 @@ export async function checkOutAction(cartId: string, details:string,city:string,
         const data = await response.json()
       return data
 }
+
+
+
+
